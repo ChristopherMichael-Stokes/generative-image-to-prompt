@@ -1,0 +1,14 @@
+*.a
+*.o
+*.so
+*.pyo
+*.pyc
+__pycache__
+.ipynb_checkpoints
+
+data/**/*
+temp/**/*
+!data/.gitkeep
+notebooks/**/*
+!notebooks/*.ipynb
+outputs/

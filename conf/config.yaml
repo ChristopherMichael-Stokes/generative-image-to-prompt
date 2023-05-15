@@ -1,0 +1,25 @@
+use_tf_core: True
+seed: 0
+
+data:
+  dataset:
+    name: poloclub/diffusiondb
+    part: 2m_first_100k
+  dataloader:
+    batch_size: 5
+    num_workers: 1
+    pin_memory: True
+
+model:
+  dir: data/models/blip2
+  dtype: bfloat16
+  offload_state_dict: True
+
+train:
+  lr: 8e-5
+  epochs: 2
+  do_checkpoint: True
+
+hydra:
+  job:
+    chdir: True

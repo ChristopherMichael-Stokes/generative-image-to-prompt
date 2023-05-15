@@ -203,6 +203,7 @@ def main(cfg: Any):
             f'Epoch: {epoch}, Training Loss: {train_loss}, Validation Loss: {val_loss}, Validation Score: N/A')
     log.info('Saving final model')
     model.save_pretrained('blip2', max_shard_size='1GB')
+    processor.save_pretrained('blip2')
 
 
 if __name__ == '__main__':
